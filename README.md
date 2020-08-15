@@ -2,7 +2,7 @@
 ## 1. Linux
 ### <details> <summary> Enumration</summary>
 <details open> <summary> Nmap </summary></details>
-   <details open> <summary> Files</summary><br>{% include 01.md %}</details>
+   <details open> <summary> Files</summary><br> {% include 01.md %}</details>
    <details> <summary> Ls</summary></details>
      ```
      -a : show all file including hidden file.
