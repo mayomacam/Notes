@@ -1,0 +1,13 @@
+# Notes
+* Linux
+  * Enumration
+  * Linux-basics
+  * Remote
+  * Files
+  * Forensic
+  * Bash
+  * Others
+* Windows
+   * Enumration
+   * Powershell
+   * Others
