@@ -1,25 +1,28 @@
 # Notes
 ## 1. Linux
-### <details> <summary> Enumration</summary>
-<details open> <summary> Nmap </summary></details>
-   <details open> <summary> Files</summary><br> {% include 01.md %}</details>
-   <details> <summary> Ls</summary></details>
-     ```
-     -a : show all file including hidden file.
-     -l : use a long listing format
-     -R : list subdirectories recursively
-     -S : sort by file size, largest first
-     -Z : print any security context of each file
-     ```
-     </details>
-2. <details> <summary> cat</summary>
+### <details> <summary> Enumration</summary><blockquote>
+<details open> <summary> Nmap </summary><blockquote>
+   
+   </blockquote></details>
+<details open> <summary> Files</summary><blockquote>
+   <br>
+   
+   </blockquote></details>
+<details> <summary>1. Ls</summary><blockquote>
+<br>-a : show all file including hidden file.
+<br>-l : use a long listing format
+<br>-R : list subdirectories recursively
+<br>-S : sort by file size, largest first
+<br>-Z : print any security context of each file
+</blockquote></details>
+<details> <summary>2. cat</summary><blockquote>
     ` cat $file`
-   </details>
-3. <details> <summary> 
+   </blockquote></details>
+<details> <summary>3. <blockquote>
 
 
-</details>
-</details>
+</blockquote></details>
+</blockquote></details>
 
 <details> <summary> Remote</summary>
 </details>
