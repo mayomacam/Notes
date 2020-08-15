@@ -1,16 +1,9 @@
 # Notes
 ## 1. Linux
-<details> <summary> Enumration</summary>
-<details open> <summary> Nmap </summary>
-   1. Fast scan
-     <br>` nmap -p- --min-rate 10000 -Pn $ip`
-   2. Detailed scan
-     <br>` nmap -pPort -sC -sV -oA scans/nmap-tcpscripts $ip`
-       <br>Port : all ports , seperated.
-</details>
-
-<details open> <summary> Files</summary>
-1. <details> <summary> Ls</summary>
+### <details> <summary> Enumration</summary>
+<details open> <summary> Nmap </summary></details>
+   <details open> <summary> Files</summary><br>{% include 01.md %}</details>
+   <details> <summary> Ls</summary></details>
      ```
      -a : show all file including hidden file.
      -l : use a long listing format
