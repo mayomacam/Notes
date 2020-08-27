@@ -1,0 +1,10 @@
+dotnet new console -o myApp
+cd myApp
+#edit Program.cs
+use classname which was given or check in csproj file and get name as root***** related tag.
+
+Save
+
+dotnet run 
+
+use to run the app

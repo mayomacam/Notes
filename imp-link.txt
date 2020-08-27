@@ -1,0 +1,10 @@
+https://book.hacktricks.xyz/brute-force#default-credentials
+
+
+
+https://github.com/topics/pentesting-windows
+
+
+ssh.com
+
+http://www.t1shopper.com/tools/port-scan/

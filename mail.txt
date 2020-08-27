@@ -1,0 +1,12 @@
+telnet ip 25
+netcat ip 143
+ncat --ssl ip 993
+
+in telnet.
+
+
+C: MAIL FROM: xyz@xyz.com
+C: RCPT TO: airisatou@sneakymailer.htb
+C: DATA
+
+evalution tool when we have user pass and other creds,

@@ -1,0 +1,6 @@
+with a host given we can search if there are more domains.
+
+
+wfuzz -c -u 'http://10.10.10.170' -H 'Host: FUZZ.player2.htb' -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt --hl 3 --hc 400
+
+

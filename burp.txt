@@ -1,0 +1,5 @@
+we can change request type auto in burp with change request type.
+
+get to post and post to get or other
+
+

@@ -1,0 +1,39 @@
+wfuzz -c -w /usr/share/wordlists/wfuzz/general/big.txt -z list,txt-php-html -u http://10.10.10.187/admin-dir/FUZZ.FUZ2Z --hc 404,403 -t 100
+
+wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -z list,proto -u http://player2.htb/proto/FUZZ.FUZ2Z --hc 404,403 -t 100
+
+wfuzz -c -w /usr/share/wordlists/dirb/big.txt -z list,txt-php-html -u http://10.10.10.175/FUZZ.FUZ2Z --hc 404,403 -t 100
+
+
+
+sudo dirsearch -u http://fabricorp.local -e *
+
+wfuzz -c -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt --hc 404,403 -u "http://10.10.10.191/FUZZ.txt" -t 100
+
+
+gobuster dir -u http://10.10.10.185 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -q
+==================================================================================================================================
+ wfuzz -c -u 'http://10.10.10.203' -H 'Host: FUZZ.worker.htb' -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt --hl 3 --hc 400
+ 
+ -hl for line.
+ --hc/hl/hw/hh N[,N]+        : Hide responses with the specified code/lines/words/chars (Use BBB for taking values from baseline)
+    --sc/sl/sw/sh N[,N]+        : Show responses with the specified code/lines/words/chars (Use BBB for taking values from baseline)
+    --ss/hs regex           : Show/hide responses with the specified regex within the content
+    --filter <filter>       : Show/hide responses using the specified filter expression (Use BBB for taking values from baseline)
+    --prefilter <filter>        : Filter items before fuzzing using the specified expression.
+=========================================================================================================================
+gobuster
+==============================================================================================================================
+
+dns:-
+gobuster dns -d mysite.com -t 50 -w common-names.txt
+
+
+ip:-
+gobuster dns -d google.com -w ~/wordlists/subdomains.txt -i
+
+more
+https://github.com/OJ/gobuster
+================================================================================================================================
+
+

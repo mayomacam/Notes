@@ -1,0 +1,25 @@
+cmd /c "C:\Program Files\NSClient++\nscp.exe" web -- password --display
+
+
+password display
+
+=====================================================================================================
+
+cmd /c "C:\Program Files\NSClient++\nscp.exe" --version
+
+
+version
+
+======================================================================================================
+
+Get-Service nscp | fl *
+
+basic setting permission check for nscp
+
+================================================================================================
+
+The CanStop parameter is set to true which means we can stop the service. Normally a low
+privileged user cannot start the service but in this case the user has been granted permission to
+start it.
+
+=================================================================================================

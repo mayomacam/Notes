@@ -1,0 +1,5 @@
+ls windows
+
+ls -hidden  ///  for hidden files
+
+

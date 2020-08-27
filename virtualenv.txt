@@ -1,0 +1,31 @@
+First create a directory for your new shiny isolated environment
+
+mkdir ~/virtualenvironment
+
+To create a folder for your new app that includes a clean copy of Python,
+simply run:
+
+virtualenv ~/virtualenvironment/my_new_app
+
+(add --no-site-packages if you want to isolate your environment from the main site
+packages directory)
+
+To begin working with your project, you have to cd into your directory (project)
+and activate the virtual environment.
+
+cd ~/virtualenvironment/my_new_app/bin
+
+Lastly, activate your environment:
+
+source activate
+
+Notice how the prompt of your shell changed to show the active environment. 
+
+That is how you can see that you're in your new environment.
+
+Any packages you install now using pip or easy_install get installed into
+my_new_app/lib/python2.7/site-packages.
+
+To exit your virtualenv just type “deactivate”.
+
+

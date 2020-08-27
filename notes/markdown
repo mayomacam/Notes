@@ -1,0 +1,206 @@
+markdown
+
+.md or .markdown
+
+=================================================================================================================================
+
+- [x] Additional markup is supported, including @mentions, #references, [links](url), **emphasis**, and <del>HTML tags</del>.
+- [x] List syntax is required.
+  - You can nest lists below, too!
+  
+  this -[] gonna make a checkbox.
+  
+ 
+  - create a * or . for indication.
+ =====================================================================================================================================
+ 
+6 types of headers
+
+#
+##
+###
+####
+#####
+######
+
+================================================================================
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
+add image.
+================================================================================
+
+for blog page and page with date update
+
+_posts/YYYY-MM-DD-title.md
+
+this will make it a post for today date on our blog in git.
+title we can change .
+yyyy-mm-dd we have to give it blog write date.
+================================================================================
+
+---
+title: "Welcome to my blog"
+date: 2019-01-20
+---
+
+too set title and date.
+================================================================================
+
+[GitHub](http://github.com/mayomacam)
+
+add link.
+================================================================================
+{% include 01-name.md %}
+
+
+<br>
+
+{% include 02-image.md %}
+
+<br>
+
+{% include 03-links.md %}
+
+add md pades into our webpage.
+================================================================================
+
+heart 	    :heart:
++1 	        :+1:
+smile 	    :smile:
+sparkles 	:sparkles:
+tada 	    :tada:
+
+add emoji.
+see link https://gist.github.com/rxaviers/7360908
+. In most text fields on GitHub, you can type : and then begin to type the name of an emoji. A fuzzy search will bring up the 5 best guesses and let you select one.
+
+================================================================================
+
+ordered list--------------------
+
+1. Item 1
+2. Item 2
+3. Item 3
+   1. Item 3a
+   2. Item 3b
+
+look like this.
+  1.  Item 1
+  2.  Item 2
+  2.  Item 3
+      i.  Item 3a
+      ii.  Item 3b
+
+================================================================================
+
+Unordered Lists:----------------------
+
+To create an unordered list, use either the - or * character. As with ordered lists, you can nest a list by indenting two spaces.
+
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+
+   . Item 1
+   . Item 2
+      .  Item 2a
+      .  Item 2b
+      
+https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
+see this for more.
+================================================================================
+
+Quoting text
+
+You can quote text with a >.
+
+In the words of Abraham Lincoln:
+
+> Pardon my French
+
+================================================================================
+
+*This text will be italic*
+_This will also be italic_
+
+**This text will be bold**
+__This will also be bold__
+
+_You **can** combine them_
+
+bold and italic.
+================================================================================
+https://help.github.com/articles/adding-a-jekyll-theme-to-your-github-pages-site-with-the-jekyll-theme-chooser/
+
+see this for more theme.
+======================================================================================
+
+
+Username and Team @mentions
+
+mention a person
+================================================================================
+
+To bring up a list of suggested issues and pull requests within a repository, type #. Type the issue or pull request number or title to filter the list, and then press either Tab or Enter to complete the highlighted result.
+
+Additionally, references to issues and pull requests are automatically converted to shortened links to the issue or pull request. For example,
+Reference type 	                               Raw reference 	                Short link
+Issue or pull request URL 	     https://github.com/desktop/desktop/pull/3602 	#3602
+# and issue or pull request number 	                    #3602 	                #3602
+GH- and issue or pull request number 	                GH-3602 	            GH-3602
+Username/Repository# and issue or pull request number 	desktop/desktop#3602 	desktop/desktop#3602
+
+==========================================================================================================
+
+References to a commit's ID (commonly called a SHA or hash) are automatically converted into shortened links to the commit on GitHub. For example,
+Reference type 	            Raw reference 	                                    Short link
+Commit URL 	                desktop/desktop@8304e9c 	                        8304e9c
+SHA 	                    8304e9c271a5e5ab4fda797304cd7bcca7158c87 	        8304e9c
+User@SHA 	                desktop@8304e9c271a5e5ab4fda797304cd7bcca7158c87 	desktop@8304e9c
+Username/Repository@SHA 	User/Repository@SHA: desktop/desktop@8304e9c 	    desktop/desktop@8304e9c
+
+============================================================================================================
+
+Tables
+
+You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe |:
+
+```
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+```
+==============================================================================================================
+
+inline code
+
+`code`    for one line code
+
+```
+code
+```
+for multi line
+
+==============================================================================================================
+
+Summary dropdown
+
+Most of the text in this issue is formatted in collapsible summary blocks. Here's how to make them with Markdown:
+
+<details>
+  <summary>Title</summary>
+
+  Content here
+
+</details>
+
+================================================================================================================
+
+https://jekyllrb.com/docs/front-matter/
+
+===================================================================================================================
+
+

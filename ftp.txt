@@ -1,0 +1,41 @@
+Before downloading a file, we should set the local FTP file download directory by using 'lcd' command:
+
+lcd /home/user/yourdirectoryname
+
+
+===================================================================================
+ftp 10.10.10.197 21
+
+=======================================================================================
+
+https://www.smartfile.com/blog/the-ultimate-ftp-commands-list/
+
+https://www.howtoforge.com/tutorial/how-to-use-ftp-on-the-linux-shell/
+
+==========================================================================================
+
+Now, we can use the command 'get' command to download a file, the usage is:
+
+get file
+
+
+To download several files we can use wildcards. In this example, I will download all files with the .xls file extension.
+
+mget *.xls
+
+
+
+
+We can upload files that are in the local directory where we made the FTP connection.
+
+To upload a file, we can use 'put' command.
+
+put file
+
+When the file that you want to upload is not in the local directory, you can use the absolute path starting with "/" as well:
+
+put /path/file
+
+To upload several files we can use the mput command similar to the mget example from above:
+
+mput *.xls

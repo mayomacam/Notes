@@ -1,0 +1,23 @@
+find / -perm +6000 2>/dev/null | grep '/bin/'
+
+To find the root process
+
+ find / -type f -user www-data
+
+find / -user root -perm -4000 -print 2>/dev/null
+
+find / -user root -perm -4000 -exec ls -ldb {} \;
+
+find / -type f -user www-data | cat * | grep "password"
+
+find / -perm /4000 -type f -exec ls -ld {} \; 2>/dev/null
+
+
+here use pass , passwd , password in grep
+
+find / -readable 
+readable by current user
+
+find / -user bandit7 -group bandit6 -size 33c
+
+find / -user bandit7 -group bandit6 -size 33c -type f -ls

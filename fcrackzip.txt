@@ -1,0 +1,26 @@
+
+    -b: for using brute force algorithms.
+    -D: for using a dictionary.
+    -B: execute a small benchmark.
+    -c: use characters from charset.
+    -h: show the help message.
+    –version: show the version of this program.
+    -V: validate or check the algorithm.
+    -v: for verbose mode.
+    -p: for using a string as a password.
+    -l: for providing a specific length to password.
+    -u: for weed out wrong passwords.
+    -m: to specify the method number.
+
+
+fcrackzip -b -c 'a' -u file.zip
+	
+fcrackzip -b -v -c 'a' -u file.zip
+
+dic attack :-
+
+fcrackzip -D -p rockyou.txt file.zip
+
+fcrackzip -b -v -c 'a' -m 1 -u file.zip
+
+fcrackzip -b -v -D -p /usr/share/wordlists/rockyou.txt -m 1 -u 6969.zip

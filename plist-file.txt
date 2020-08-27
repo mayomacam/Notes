@@ -1,0 +1,6 @@
+plist file open:-
+
+sudo apt-get install libplist-utils
+plistutil tool
+
+

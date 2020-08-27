@@ -1,0 +1,11 @@
+ldapsearch -x -h 10.10.10.175
+
+ldapsearch -x -h 10.10.10.193 -s base namingcontexts
+
+ldapsearch -x -h 10.10.10.193 -b "DC=fabricorp,DC=local" '[objectClass=Person]'
+
+ldapsearch -x -h 10.10.10.175 -b "Dc=,DC=" '[objectClass=Person]'
+
+
+
+

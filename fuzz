@@ -1,0 +1,3 @@
+use gobuster for fuzz
+
+gobuster dir -u http://10.10.10.18/ -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt

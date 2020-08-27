@@ -1,0 +1,1 @@
+https://docs.nsclient.org/api/rest/queries/#command-execute

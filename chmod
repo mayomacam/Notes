@@ -1,0 +1,17 @@
+
+    The first argument you give to the “chmod” command is ‘u’, ‘g’, ‘o’. We use:
+    u for user
+    g for group
+    o for others,
+    you can also use a combination of them (u,g,o).
+    This specifies which of the three groups you want to modify.
+    After this use
+    a ‘+’ for adding
+    a ‘-‘ for removing
+    and a “=” for assigning a permission.
+    Then specify the permission r,w or x you want to change.
+    Here also you can use a combination of r,w,x.
+    This specifies which of the three permissions “rwx” you want to modify
+    use can use commas to modify more permissions
+    Finally, the name of the file whose permission you are changing
+

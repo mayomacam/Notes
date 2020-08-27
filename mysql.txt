@@ -1,0 +1,1 @@
+mysql --user=finley --password=password db_name

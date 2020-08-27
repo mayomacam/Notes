@@ -1,0 +1,28 @@
+grep l.rts 
+
+gonna match use . as all char and gonna all letters contain l rts.
+
+===========================================
+
+grep ^fruit
+
+gonna match start from beginngin
+
+
+============================================
+
+grep fruit$
+
+gonna match start from end.
+
+=============================================
+
+grep -i word
+
+gonna match upper and lower both
+
+otherwise only lower if word in lower. means case sesitive.
+===================================================
+
+
+grep match lines.

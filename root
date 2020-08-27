@@ -1,0 +1,3 @@
+Now let’s look for privilege escalation , sudo -l we get to see that peter is having sudo on /bin/strace , now we will use strace to privilege the user
+
+sudo strace -o /dev/null /bin/sh

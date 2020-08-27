@@ -1,0 +1,7 @@
+ippsec.rock
+
+hashcat --force --stdout abc.txt -r /usr/share/hashcat/rules/base64.rule -r /usr/share/hashcat/ | wc -l
+
+https://charlesreid1.com/wiki/John_the_Ripper/Password_Generation
+
+over the wire -wargame

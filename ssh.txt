@@ -1,0 +1,7 @@
+/usr/share/john/ssh2john.py .ssh/joanna > crack.txt
+
+use this for make ssh key to convert.
+
+john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.txt
+
+for password.

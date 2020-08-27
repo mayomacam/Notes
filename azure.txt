@@ -1,0 +1,2 @@
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/cyberark/SkyArk/master/AzureStealth/AzureStealth.ps1')  
+   (2) Scan-AzureAdmins

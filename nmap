@@ -1,0 +1,50 @@
+nmap -sS -p- TARGET_IP #syn 
+
+fast nmap:-
+
+nmap -p- --min-rate 10000 -Pn 10.10.10.172
+
+
+nmap -p $(grep -Eo '[0-9]{1,4}/open' rabbit.nmap | cut -d '/' -f 1 | tr -s '\n' ',') -sC -sV 10.10.10.71
+
+
+#more details
+nmap -p 53,88,135,139,389,445,464,593,636,3268,3269,5985,9389 -sC -sV -oA scans/nmap-tcpscripts 10.10.10.172
+
+nmap -pPort -sC -sV -oA scans/nmap-tcpscripts 10.10.10.172
+http://www.t1shopper.com/tools/port-scan/
+
+===================================================================================================================
+
+-oG gonna give data in grepable format
+
+================================================================================
+
+--open to only return machines with open ports
+
+================================================================================
+
+-v string 
+
+data(keyword) lines which we don't want to include.
+
+================================================================================
+
+sudo nmap -A -p88 --open 18.11.1.8/24 -oG nmap-scan_10.11.1.1-254
+
+above scan give output.
+
+================================================================================
+
+run script in /Videos/script-by-me/nmap
+
+to easy your work.
+might update that later.
+================================================================================
+
+
+nmap --script svn-brute --script-args svn-brute.repo=/svn/ -p 3690 -v 10.10.10.203
+
+
+svnserve service : - subversion version
+============================================================================================================

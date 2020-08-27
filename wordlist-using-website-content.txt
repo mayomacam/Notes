@@ -1,0 +1,1 @@
+cewl -w wordlists.txt -d 10 -m 1 http://10.10.10.191/

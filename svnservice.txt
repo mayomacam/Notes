@@ -1,0 +1,56 @@
+svn info svn://1p.port
+
+give info.
+==========================================================================================
+
+svnrdump dump svn://ip.port
+
+dump anonymous data dump without creds.
+=============================================================================================
+
+svnrdump load svn://10.10.10.203:3690
+
+===============================================================================================
+
+ 6906  svnsync synchronize .  svn://10.10.10.203:3690/ --source-username nathen --source-password wendel98 --steal-locks 
+ 6907  svnsync synchronize . svn://10.10.10.203:3690/ --source-username nathen --source-password wendel98 --steal-locks 
+ 6908  cd ..
+ 6909  svnsync synchronize ./asd/ svn://10.10.10.203:3690/ --source-username nathen --source-password wendel98 --steal-locks 
+ 6910  svnsync synchronize ./asd/ svn://10.10.10.203:3690/ --source-username nathen --source-password wendel98
+ 6911  svnsync synchronize svn://10.10.10.203:3690/ ./asd/ --source-username nathen --source-password wendel98
+ 6912  svnsync synchronize svn://asd/ svn://10.10.10.203:3690/ --source-username nathen --source-password wendel98
+ 6913  svn help copy
+ 6914  svn export svn://10.10.10.203:3690/
+ 6915  svn export svn://10.10.10.203:3690/ --force
+ 6916  strings out2.txt | less
+ 6917  svnadmin create
+ 6918  svnadmin create asd
+ 
+ ==============================================================================================
+ 
+ svnadmin tool for local repo
+ 
+ ============================================================================================
+ 
+ https://www.open.collab.net/nonav/scdocs/ddUsingSVN_command-line.html
+ 
+ see more
+ 
+ ======================================================================================================
+ 
+ http://svnbook.red-bean.com/en/1.5/svn-book.html#svn.reposadmin.maint.tk.svnadmin
+ 
+ see more
+ ======================================================================================================
+ 
+ svn checkout to make a local copy ,
+ 
+ svn checkout svn://10.10.10.203:3690
+ 
+ ==========================================================================================================
+ 
+ 
+ svnrdump load svn://10.10.10.203:3690
+ 
+ 
+ svnadmin list-dblogs svn://10.10.10.203:3690

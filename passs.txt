@@ -1,0 +1,13 @@
+Hint where is {user,root}.txt
+
+We would prefer the standard locations for the flags:
+Windows
+
+    user.txt: C:\Users\USERNAME\Desktop\user.txt
+    root.txt: C:\Users\Administrator\Desktop\user.txt
+
+*nix
+
+    user.txt: /home/USERNAME/user.txt
+    root.txt: /root/root.txt
+

@@ -1,0 +1,6 @@
+https://0x1.gitlab.io/exploit/Windows-Privilege-Escalation/#rottenpotato-token-impersonation
+
+
+
+
+https://0x1.gitlab.io/exploit/Windows-Privilege-Escalation/

